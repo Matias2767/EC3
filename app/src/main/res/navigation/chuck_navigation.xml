@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chuck_navigation"
+    app:startDestination="@id/chuckListFragment">
+
+    <fragment
+        android:id="@+id/infoFragment2"
+        android:name="com.example.ec3.view.fragments.infoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/chuckFavoriteFragment"
+        android:name="com.example.ec3.view.fragments.ChuckFavoriteFragment"
+        android:label="fragment_chuck_favorite"
+        tools:layout="@layout/fragment_chuck_favorite" />
+    <fragment
+        android:id="@+id/chuckDetailFragment"
+        android:name="com.example.ec3.view.fragments.ChuckDetailFragment"
+        android:label="fragment_chuck_detail"
+        tools:layout="@layout/fragment_chuck_detail" />
+    <fragment
+        android:id="@+id/chuckListFragment"
+        android:name="com.example.ec3.view.fragments.ChuckListFragment"
+        android:label="fragment_chuck_list"
+        tools:layout="@layout/fragment_chuck_list" >
+        <action
+            android:id="@+id/action_chuckListFragment_to_chuckDetailFragment"
+            app:destination="@id/chuckDetailFragment" />
+    </fragment>
+</navigation>
